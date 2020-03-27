@@ -1,0 +1,6 @@
+FIRE    1 Temperatura-vozdukha+Osadki>Pogodnye-usloviya-3: f-3,f-2
+==> f-4     (Pogodnye-usloviya (Tip "реокюъ, бкюфмюъ онцндю"))
+FIRE    2 Pogodnye-usloviya+Chastota-poliva>Sostoyanie-pochvy-1: f-4,f-1
+==> f-5     (Sostoyanie-pochvy (Sostoyanie "нркхвмне"))
+FIRE    3 Sostoyanie-pochvy>Urozhay-1: f-5
+==> f-6     (Urozhay (Pokazatel "анкэьни"))

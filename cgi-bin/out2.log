@@ -1,0 +1,29 @@
+FIRE    1 dam-mechanism-ky-1001: f-1,f-2,f-3,f-4
+==> f-5     (exist-event (cf "0,9") (caption "MECHANISM 'CORROSION FATIGUE'") (caption-kin nil) (probabilityrel "0") (id "0"))
+FIRE    2 fai-kinatics-ky-1001: f-5
+==> f-6     (exist-kin (caption "KINETICS 'CORROSION FATIGUE'") (caption-meh "CORROSION FATIGUE") (cf "0,9"))
+FIRE    3 fai-kinatic-events-ky-1001: f-6
+==> f-7     (exist-event (cf "0,9") (caption "LEAKAGE OF THE WORKING ENVIRONMENT THROUGH THE THROUGH CRACKS") (caption-kin "KINETICS 'CORROSION FATIGUE'") (probabilityrel "1") (id "0"))
+==> f-8     (exist-event (cf "0,9") (caption "COMPLETE RESET OF THE WORKING ENVIRONMENT") (caption-kin "KINETICS 'CORROSION FATIGUE'") (probabilityrel "1") (id "0"))
+FIRE    4 fai-kinatic-events-ky-1003: f-6,f-8
+==> f-9     (exist-event (cf "0,9") (caption "BRITTLE FAILURE") (caption-kin "KINETICS 'CORROSION FATIGUE'") (probabilityrel "1") (id "0"))
+FIRE    5 fai-kinatic-events-ky-1002: f-6,f-7
+==> f-10    (exist-event (cf "0,9") (caption "FORMATION OF THE THROUGH CRACKS") (caption-kin "KINETICS 'CORROSION FATIGUE'") (probabilityrel "1") (id "0"))
+FIRE    6 dam-kinatic-events-ky-1001: f-6
+==> f-11    (exist-dam (id-dam "йс-1") (caption-dam "CRACK") (dam-type nil) (dam-stress-type nil) (dam-mesto-zarozdenia nil) (dam-istochnik "CORROSION FATIGUE") (dam-mestopolozenie nil) (dam-orientacia "PERPENDICULARLY") (dam-glubina nil) (dam-dlina nil) (dam-diametr nil) (dam-forma nil) (dam-kolichestvo "SINGLE") (dam-velichina-raskritia nil) (dam-tech-pered-razrusheniem nil) (dam-napravlenie "LONGITUDINAL") (caption-def nil) (id-def nil) (caption-meh "CORROSION FATIGUE") (dam-cf "0,9"))
+==> f-12    (exist-event (cf "0,9") (caption "MACROCRACKS DEVELOPMENT OF STRUCTURAL DAMAGE IN ZONES OF STRESS CONCENTRATORS 'FROM THE HOLE IN THE SAME PLANE IN TWO DIRECTIONS'") (caption-kin "KINETICS 'CORROSION FATIGUE'") (probabilityrel "1") (id "0"))
+FIRE    7 dam-mechanism-ky-1002: f-1,f-2,f-3,f-4,f-12
+FIRE    8 des-mechanism-ky-1001: f-11
+==> f-13    (exist-des (id-des "йс-1") (caption-des "MACROCRACK") (des-istochnik "SURFACE DAMAGE") (des-orientacia "PERPENDICULARLY") (des-napravlenie "LONGITUDINAL") (des-forma nil) (des-kolichestvo "SINGLE") (des-koncentracia-naprazheniy nil) (des-mestopolozenie "CRACK") (caption-dam "CRACK") (id-dam "йс-1") (caption-meh "CORROSION FATIGUE") (des-cf "0,9"))
+==> f-14    (exist-event (cf "0,9") (caption "FORMATION OF THE MACROCRACKS OF THE UNACCEPTABLE SIZE") (caption-kin "KINETICS 'CORROSION FATIGUE'") (probabilityrel "1") (id "0"))
+FIRE    9 dam-kinatic-events-ky-1002: f-6,f-11,f-14
+==> f-15    (exist-event (cf "0,9") (caption "MERGING MICROCRACKS") (caption-kin "KINETICS 'CORROSION FATIGUE'") (probabilityrel "1") (id "0"))
+FIRE   10 dam-kinatic-events-ky-1003: f-6,f-15
+==> f-16    (exist-event (cf "0,9") (caption "PREFERENTIAL DEVELOPMENT OF MICROCRACKS ORIENTED IN PLANES PERPENDICULAR TO THE MAXIMUM TENSILE STRESS") (caption-kin "KINETICS 'CORROSION FATIGUE'") (probabilityrel "1") (id "0"))
+FIRE   11 dam-kinatic-events-ky-1004: f-6,f-16
+==> f-17    (exist-event (cf "0,9") (caption "FORMATION OF THE MICROCRACKS") (caption-kin "KINETICS 'CORROSION FATIGUE'") (probabilityrel "1") (id "0"))
+FIRE   12 dam-kinatic-events-ky-1005: f-6,f-17
+==> f-18    (exist-event (cf "0,9") (caption "DEVELOPMENT OF INTRAGRANULAR SUBMICROCRACKS DUE TO THE DISSOLUTION IN THE SLIP PLANES") (caption-kin "KINETICS 'CORROSION FATIGUE'") (probabilityrel "1") (id "0"))
+FIRE   13 dam-kinatic-events-ky-1006: f-6,f-18
+==> f-19    (exist-event (cf "0,9") (caption "FORMATION OF LOCAL DEFORMATION ZONES IN THE SURFACE DUE TO CYCLIC LOADING") (caption-kin "KINETICS 'CORROSION FATIGUE'") (probabilityrel "1") (id "0"))
+FIRE   14 dam-kinatics-ky-1001: f-5

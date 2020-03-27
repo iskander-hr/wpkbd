@@ -1,0 +1,3934 @@
+<Structure>
+<KnowledgeBase>
+	<ID>4</ID>
+	<Name>База знаний ДП</Name>
+	<ShortName></ShortName>
+	<Kind>0</Kind>
+	<Description>База знаний добавлена из файла</Description>
+<Vars/>
+<Templates>
+<Template>
+	<ID>T001</ID>
+	<Name>Материал объекта</Name>
+	<ShortName>material</ShortName>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Slots>
+		<Slot>
+			<Name>Наименование</Name>
+			<ShortName>caption</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Вид</Name>
+			<ShortName>type</ShortName>
+			<Description></Description>
+			<Value>;СТАЛЬ;МЕТАЛЛ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Предел прочности</Name>
+			<ShortName>mechanical-prop-strength-limit</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Предел текучести</Name>
+			<ShortName>mechanical-prop-yield-limit</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Стойкость к коррозии</Name>
+			<ShortName>resistance-prop-corrosion</ShortName>
+			<Description></Description>
+			<Value>;ДА;НЕТ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Температурная стойкость</Name>
+			<ShortName>resistance-prop-temperature</ShortName>
+			<Description></Description>
+			<Value>;ДА;НЕТ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Износоустойчивость</Name>
+			<ShortName>resistance-prop-wear</ShortName>
+			<Description></Description>
+			<Value>;ДА;НЕТ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Легированность</Name>
+			<ShortName>chemical-prop-alloying</ShortName>
+			<Description></Description>
+			<Value>;НИЗКОЛЕГИРОВАННАЯ СТАЛЬ;СРЕДНЕЛЕГИРОВАННАЯ СТАЛЬ;ВЫСОКОЛЕГИРОВАННАЯ СТАЛЬ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Структурный класс</Name>
+			<ShortName>structure-prop-class</ShortName>
+			<Description></Description>
+			<Value>;МАРТЕНСИТНЫЙ;ФЕРРИТНЫЙ;МАРТЕНСИТНЫЙ ИЛИ ФЕРРИТНЫЙ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Технологическая наследственность</Name>
+			<ShortName>technological-heredity</ShortName>
+			<Description></Description>
+			<Value>;НЕОДНОРОДНОСТЬ ГРАНИЦ ЗЕРЕН ИЛИ ХРУПКОСТЬ ГРАНИЦ ЗЕРЕН ИЛИ НЕОДНОРОДНОСТЬ МИКРОНАПРЯЖЕННОГО СОСТОЯНИЯ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+	</Slots>
+</Template>
+<Template>
+	<ID>T002</ID>
+	<Name>Остаточные напряжения</Name>
+	<ShortName>ostatochnie-napryagenia</ShortName>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Slots>
+		<Slot>
+			<Name>Вид</Name>
+			<ShortName>ostN-vid</ShortName>
+			<Description></Description>
+			<Value>;РАСТЯГИВАЮЩИЕ;СЖИМАЮЩИЕ;НАПРЯЖЕНИЯ СДВИГА</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Величина</Name>
+			<ShortName>ostN-znachenie</ShortName>
+			<Description></Description>
+			<Value>;МАКСИМАЛЬНЫЕ;СРЕДНИЕ;МИНИМАЛЬНЫЕ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Местоположение</Name>
+			<ShortName>ostN-mestopolozenie</ShortName>
+			<Description></Description>
+			<Value>;НА БОКОВОЙ ПОВЕРХНОСТИ;НА ВОГНУТОЙ ПОВЕРХНОСТИ;НА БОКОВОЙ ИЛИ ВОГНУТОЙ ПОВЕРХНОСТИ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Ориентация</Name>
+			<ShortName>ostN-orientacia</ShortName>
+			<Description></Description>
+			<Value>;ПРОДОЛЬНЫЕ;ПЕРПЕНДИКУЛЯРНЫЕ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Причина</Name>
+			<ShortName>ostN-prichina</ShortName>
+			<Description></Description>
+			<Value>;ДЕФОРМАЦИЯ В ХОЛОДНОМ СОСТОЯНИИ ПРИ ГНУТЬЕ </Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+	</Slots>
+</Template>
+<Template>
+	<ID>T003</ID>
+	<Name>Конструкционная наследственность</Name>
+	<ShortName>structural-heredity</ShortName>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Slots>
+		<Slot>
+			<Name>Конструктивные концентраторы напряжений</Name>
+			<ShortName>structural-stress-concentrators</ShortName>
+			<Description></Description>
+			<Value>;Переходы поверхностей;Галтели;Соединения  </Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Абсолютные размеры сечения элемента</Name>
+			<ShortName>absolute-sizes-section-element</ShortName>
+			<Description></Description>
+			<Value>;Незначительные;Значительные</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+	</Slots>
+</Template>
+<Template>
+	<ID>T004</ID>
+	<Name>Дефекты изготовления</Name>
+	<ShortName>making-defects</ShortName>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Slots>
+		<Slot>
+			<Name>Наличие дефекта изготовления</Name>
+			<ShortName>def-nalichie</ShortName>
+			<Description></Description>
+			<Value>ДА;НЕТ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Вид дефекта изготовления</Name>
+			<ShortName>type</ShortName>
+			<Description></Description>
+			<Value>;ЗАКАТЫ;НЕМЕТАЛЛИЧЕСКИЕ ВКЛЮЧЕНИЯ;МИКРОТРЕЩИНЫ;ПОРЫ;РАССЛОЕНИЕ;ТРЕЩИНА (Ы) - ДЕФЕКТ;ФЛОКЕНЫ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Причина возникновения</Name>
+			<ShortName>cause</ShortName>
+			<Description></Description>
+			<Value>;СВАРКА</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Месторасположение</Name>
+			<ShortName>location</ShortName>
+			<Description></Description>
+			<Value>;ЗОНА ТЕРМАЛЬНОГО ВОЗДЕЙСТВИЯ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+	</Slots>
+</Template>
+<Template>
+	<ID>T005</ID>
+	<Name>Механические нагрузки статические</Name>
+	<ShortName>mechanical-stress-const</ShortName>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Slots>
+		<Slot>
+			<Name>Наличие статических механических нагрузок</Name>
+			<ShortName>stress-const-nalichie</ShortName>
+			<Description></Description>
+			<Value>ДА;НЕТ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Вид статических нагрузок </Name>
+			<ShortName>stress-const-type</ShortName>
+			<Description></Description>
+			<Value>ВНУТРЕННЕЕ ДАВЛЕНИЕ;СОСРЕДОТОЧЕННАЯ НАГРУЗКА;РАСПРЕДЕЛЕННАЯ НАГРУЗКА</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Величина нагрузок</Name>
+			<ShortName>stress-value</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Вид напряжения</Name>
+			<ShortName>tension-type</ShortName>
+			<Description></Description>
+			<Value>РАСТЯГИВАЮЩИЕ НАПРЯЖЕНИЯ;СЖИМАЮЩИЕ НАПРЯЖЕНИЯ;НАПРЯЖЕНИЯ СДВИГА</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Величина напряжения</Name>
+			<ShortName>tension-value</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+	</Slots>
+</Template>
+<Template>
+	<ID>T006</ID>
+	<Name>Механические нагрузки переменные</Name>
+	<ShortName>mechanical-stress-variables</ShortName>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Slots>
+		<Slot>
+			<Name>Наличие переменных механических нагрузок</Name>
+			<ShortName>stress-variables-nalichie</ShortName>
+			<Description></Description>
+			<Value>ДА;НЕТ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name></Name>
+			<ShortName>stress-variables-dinamic-type</ShortName>
+			<Description></Description>
+			<Value>МАЛОЦИКЛОВАЯ (до 100000 циклов);МНОГОЦИКЛОВАЯ (до 10000000 циклов)</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Величина нагрузок</Name>
+			<ShortName>stress-value</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Амплитуда цикла</Name>
+			<ShortName>cycle-amplitude</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Частота цикла</Name>
+			<ShortName>cycle-frequency</ShortName>
+			<Description></Description>
+			<Value>ВЫСОКАЯ (больше 60 цикл/мин);СРЕДНЯЯ (от 20 до 60 цикл/мин);НИЗКАЯ (ниже 20 цикл/мин)</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Коэффициент асимметрии цикла</Name>
+			<ShortName>cycle-asymmetry</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Среднее значение цикла</Name>
+			<ShortName>cycle-average-value</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Вид напряжения</Name>
+			<ShortName>tension-type</ShortName>
+			<Description></Description>
+			<Value>РАСТЯГИВАЮЩИЕ НАПРЯЖЕНИЯ;СЖИМАЮЩИЕ НАПРЯЖЕНИЯ;НАПРЯЖЕНИЯ СДВИГА</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Величина напряжения</Name>
+			<ShortName>tension-value</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+	</Slots>
+</Template>
+<Template>
+	<ID>T007</ID>
+	<Name>Механические нагрузки динамические</Name>
+	<ShortName>mechanical-stress-dynamic</ShortName>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Slots>
+		<Slot>
+			<Name>Наличие статических механических нагрузок</Name>
+			<ShortName>cycle-nalichie</ShortName>
+			<Description></Description>
+			<Value>ДА;НЕТ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Амплитуда цикла</Name>
+			<ShortName>cycle-amplitude</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Частота цикла</Name>
+			<ShortName>cycle-frequency</ShortName>
+			<Description></Description>
+			<Value>ВЫСОКАЯ (больше 60 цикл/мин);СРЕДНЯЯ (от 20 до 60 цикл/мин);НИЗКАЯ (ниже 20 цикл/мин)</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Скорость</Name>
+			<ShortName>speed</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Ускорение</Name>
+			<ShortName>speed-up</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Максимальное значение нагрузок</Name>
+			<ShortName>max-stress-value</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Вид напряжения</Name>
+			<ShortName>tension-type</ShortName>
+			<Description></Description>
+			<Value>РАСТЯГИВАЮЩИЕ НАПРЯЖЕНИЯ;СЖИМАЮЩИЕ НАПРЯЖЕНИЯ;НАПРЯЖЕНИЯ СДВИГА</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Величина напряжения</Name>
+			<ShortName>tension-value</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+	</Slots>
+</Template>
+<Template>
+	<ID>T008</ID>
+	<Name>Температурные нагрузки</Name>
+	<ShortName>thermal-stress</ShortName>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Slots>
+		<Slot>
+			<Name>Перепад температуры по толщине стенки (радиальный) </Name>
+			<ShortName>drop-length</ShortName>
+			<Description></Description>
+			<Value>;Меньше 100 градусов;От 100 до  300 градусов;Больше 300 градусов</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Перепад температуры по длине</Name>
+			<ShortName>drop-thickness</ShortName>
+			<Description></Description>
+			<Value>;Меньше 10 градусов; От 10 до 100 градусов;Больше 100 градусов</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+	</Slots>
+</Template>
+<Template>
+	<ID>T009</ID>
+	<Name>Рабочая технологическая среда</Name>
+	<ShortName>technological-environment</ShortName>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Slots>
+		<Slot>
+			<Name>Температура</Name>
+			<ShortName>temperature</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Вязкость</Name>
+			<ShortName>vyazkost</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Содержание молекулярного водорода</Name>
+			<ShortName>contents-molecular-hydrogen</ShortName>
+			<Description></Description>
+			<Value>МЕНЬШЕ 10%;ОТ 10% ДО 50%;БОЛЬШЕ 50%</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Водородный показатель (pH)</Name>
+			<ShortName>pH</ShortName>
+			<Description></Description>
+			<Value>НЕЙТРАЛЬНАЯ (7 рН);АКТИВНАЯ (КИСЛАЯ, 0-7 рН);АКТИВНАЯ (ЩЕЛОЧНАЯ, 7-15 рН);АКТИВНАЯ (КИСЛАЯ или ЩЕЛОЧНАЯ);АКТИВНАЯ (ЭЛЕКТРОЛИТ)</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Радиация</Name>
+			<ShortName>radiation</ShortName>
+			<Description></Description>
+			<Value>ТЕРМИЧЕСКАЯ;ЭЛЕКТРОМАГНИТНАЯ;ИОНИЗИРУЮЩАЯ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Чередование свойств среды</Name>
+			<ShortName>properties-alternation</ShortName>
+			<Description></Description>
+			<Value>ДА;НЕТ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Влажность среды</Name>
+			<ShortName>environment-humidity</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Температура вспышки паров среды</Name>
+			<ShortName>environment-flash</ShortName>
+			<Description></Description>
+			<Value>МЕНЬШЕ 20 ГР С;ОТ 28 до 61 ГР С;БОЛЬШЕ 61 ГР С</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+	</Slots>
+</Template>
+<Template>
+	<ID>T0010</ID>
+	<Name>Теплообменная технологическая среда</Name>
+	<ShortName>heat-exchange-technological-environment</ShortName>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Slots>
+		<Slot>
+			<Name>Вид</Name>
+			<ShortName>type</ShortName>
+			<Description></Description>
+			<Value>ОБОРОТНАЯ ВОДА (слабокоррозионная);ХИМИЧЕСКИ-ОЧИЩЕННАЯ ВОДА (некоррозионная);ХИМИЧЕСКИ-ОЧИЩЕННАЯ ВОДА (слабощелочная)</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Водородный показатель (pH)</Name>
+			<ShortName>pH</ShortName>
+			<Description></Description>
+			<Value>НЕЙТРАЛЬНАЯ (7 рН);АКТИВНАЯ (КИСЛАЯ, 0-7 рН);АКТИВНАЯ (ЩЕЛОЧНАЯ, 7-15 рН);АКТИВНАЯ (КИСЛАЯ или ЩЕЛОЧНАЯ);АКТИВНАЯ (ЭЛЕКТРОЛИТ)</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Общая жесткость</Name>
+			<ShortName>obshayGestkost</ShortName>
+			<Description></Description>
+			<Value>НИЖЕ НОРМЫ;В НОРМЕ;ВЫШЕ НОРМЫ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Содержание кислорода</Name>
+			<ShortName>kislorod</ShortName>
+			<Description></Description>
+			<Value>НИЖЕ НОРМЫ;В НОРМЕ;ВЫШЕ НОРМЫ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Содержание ионов железа</Name>
+			<ShortName>gelezo</ShortName>
+			<Description></Description>
+			<Value>НИЖЕ НОРМЫ;В НОРМЕ;ВЫШЕ НОРМЫ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Содержание ионов хлора</Name>
+			<ShortName>chlor</ShortName>
+			<Description></Description>
+			<Value>НИЖЕ НОРМЫ;В НОРМЕ;ВЫШЕ НОРМЫ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Содержание ионов серы</Name>
+			<ShortName>sera</ShortName>
+			<Description></Description>
+			<Value>НИЖЕ НОРМЫ;В НОРМЕ;ВЫШЕ НОРМЫ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Содержание ионов азота</Name>
+			<ShortName>azot</ShortName>
+			<Description></Description>
+			<Value>НИЖЕ НОРМЫ;В НОРМЕ;ВЫШЕ НОРМЫ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Содержание гидрозин-гидрат</Name>
+			<ShortName>gidrozin-gidrat</ShortName>
+			<Description></Description>
+			<Value>НИЖЕ НОРМЫ;В НОРМЕ;ВЫШЕ НОРМЫ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Электродный потенциал</Name>
+			<ShortName>elektrodniyPotencial</ShortName>
+			<Description></Description>
+			<Value>НИЖЕ НОРМЫ;В НОРМЕ;ВЫШЕ НОРМЫ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+	</Slots>
+</Template>
+<Template>
+	<ID>T0011</ID>
+	<Name>Поток технологической среды</Name>
+	<ShortName>flow-technological-environment</ShortName>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Slots>
+		<Slot>
+			<Name>Наличие потока</Name>
+			<ShortName>nalichie-potok</ShortName>
+			<Description></Description>
+			<Value>ДА;НЕТ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Cкорость потока</Name>
+			<ShortName>speed</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Наличие твердых частиц</Name>
+			<ShortName>solid-particles-there</ShortName>
+			<Description></Description>
+			<Value>ДА;НЕТ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Размер твердых частиц</Name>
+			<ShortName>solid-particles-value</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Твердость твердых частиц</Name>
+			<ShortName>solid-particles-hardness</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Дифференциация составляющий потока</Name>
+			<ShortName>differentiation-of-components</ShortName>
+			<Description></Description>
+			<Value>ДЕЙСТВИЕ ЦЕНТРОБЕЖНЫХ СИЛ ИЛИ ДЕЙСТВИЕ ПОЛЕЙ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Турбулентность потока </Name>
+			<ShortName>turbulence</ShortName>
+			<Description></Description>
+			<Value>УДАР О ПОВЕРХНОСТЬ ИЛИ ОБТЕКАНИЕ ПРЕПЯТСТВИЙ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+	</Slots>
+</Template>
+<Template>
+	<ID>T0012</ID>
+	<Name>Повреждаемость поверхности вследствие воздействия агрессивной среды</Name>
+	<ShortName>surface-damage-from-corrosive-environment</ShortName>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Slots>
+		<Slot>
+			<Name>Наличие повреждаемости поверхности</Name>
+			<ShortName>nalichiePovregdaemosti</ShortName>
+			<Description></Description>
+			<Value>ДА;НЕТ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Вид повреждаемости</Name>
+			<ShortName>type</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Причина повреждаемости</Name>
+			<ShortName>cause</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Месторасположение</Name>
+			<ShortName>location</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+	</Slots>
+</Template>
+<Template>
+	<ID>T0013</ID>
+	<Name>Наблюдаемый механизм повреждения</Name>
+	<ShortName>exist-meh-dam</ShortName>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Slots>
+		<Slot>
+			<Name>Наименование</Name>
+			<ShortName>caption-meh</ShortName>
+			<Description></Description>
+			<Value>ВОДОРОДНОЕ ОХРУПЧИВАНИЕ;ИЗНАШИВАНИЕ;КОРРОЗИЯ МЕСТНАЯ;КОРРОЗИЯ СТРУКТУРНАЯ;КОРРОЗИОННОЕ РАСТРЕСКИВАНИЕ;КОРРОЗИОННАЯ УСТАЛОСТЬ;МЕХАНИЧЕСКАЯ УСТАЛОСТЬ;ЭРОЗИЯ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Коэффициент уверенности </Name>
+			<ShortName>meh-cf</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+	</Slots>
+</Template>
+<Template>
+	<ID>T0014</ID>
+	<Name>Наблюдаемые повреждения</Name>
+	<ShortName>exist-dam</ShortName>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Slots>
+		<Slot>
+			<Name>Наименование </Name>
+			<ShortName>caption-dam</ShortName>
+			<Description></Description>
+			<Value>;ТРЕЩИНА (Ы) - ПОВРЕЖДЕНИЕ;ПИТТИНГИ;ЯЗВЫ;ЭРОЗИЙНЫЕ ПОВРЕЖДЕНИЯ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Тип трещинообразования</Name>
+			<ShortName>dam-type-treshinoobrazovaniy</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Источник</Name>
+			<ShortName>dam-istochnik</ShortName>
+			<Description></Description>
+			<Value>;ДЕФЕКТ ИЗГОТОВЛЕНИЯ;ЛОКАЛЬНЫЕ КОРРОЗИОННЫЕ ВПАДИНЫ;КОНСТРУКТИВНЫЙ КОНЦЕНТРАТОР НАПРЯЖЕНИЙ;КОНСТРУКТИВНЫЙ КОНЦЕНТРАТОР НАПРЯЖЕНИЙ ОБРАЗОВАННЫЙ ПЕРЕСЕЧЕНИЕМ ОТВЕРСТИЙ;ПОВРЕЖДЕНИЯ ПОВЕРХНОСТИ;ОТВЕРСТИЕ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Местоположение</Name>
+			<ShortName>dam-mestopolozenie</ShortName>
+			<Description></Description>
+			<Value>;НА ПОВЕРХНОСТИ;НА ВНЕШНЕЙ ПОВЕРХНОСТИ;НА ВНУТРЕННЕЙ ПОВЕРХНОСТИ;БЛИЗЛЕЖАЩИЕ ЗОНЫ ТЕРМИЧЕСКОГО ВЛИЯНИЯ;НА ПОВЕРХНОСТИ, В ПРЕДЕЛАХ ОДНОЙ ЗОНЫ ТЕРМИЧЕСКОГО ВЛИЯНИЯ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Ориентация плоскости трещины по отношению к максимальным растягивающим напряжениям</Name>
+			<ShortName>dam-orientacia</ShortName>
+			<Description></Description>
+			<Value>;ПЕРЕПЕНДИКУЛЯРНО;ПРОДОЛЬНО</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Глубина</Name>
+			<ShortName>dam-glubina</ShortName>
+			<Description></Description>
+			<Value>менее 4</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Длина</Name>
+			<ShortName>dam-dlina</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Диаметр</Name>
+			<ShortName>dam-diametr</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Форма</Name>
+			<ShortName>dam-forma</ShortName>
+			<Description></Description>
+			<Value>;ВЫТЯНУТЫЕ УГЛУБЛЕНИЯ;ЦАРАПИНЫ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Форма в изломе</Name>
+			<ShortName>dam-forma-v-izlome</ShortName>
+			<Description></Description>
+			<Value>;ПОЛУЭЛЛИПТИЧЕСКАЯ;ПСЕВДОПОЛУЭЛЛИПТИЧЕСКАЯ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Количество повреждений, близких по размеру</Name>
+			<ShortName>dam-kolichestvo</ShortName>
+			<Description></Description>
+			<Value>;ОДИНОЧНЫЕ;ПОЛЕ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Распределение</Name>
+			<ShortName>dam-distribution</ShortName>
+			<Description></Description>
+			<Value>;РАВНОМЕРНО</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Величина раскрытия</Name>
+			<ShortName>dam-velichina-raskritia</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Критерий течь перед разрушением</Name>
+			<ShortName>dam-tech-pered-razrusheniem</ShortName>
+			<Description></Description>
+			<Value>;ДА;НЕТ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Направление по отношению к главной оси</Name>
+			<ShortName>dam-napravlenie</ShortName>
+			<Description></Description>
+			<Value>;ПРОДОЛЬНЫЕ;ПОПЕРЕЧНЫЕ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Коэффициент уверенности</Name>
+			<ShortName>dam-cf</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+	</Slots>
+</Template>
+<Template>
+	<ID>T0015</ID>
+	<Name>Наблюдаемый механизм разрушения</Name>
+	<ShortName>exist-meh-des</ShortName>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Slots>
+		<Slot>
+			<Name>Наименование</Name>
+			<ShortName>caption-meh</ShortName>
+			<Description></Description>
+			<Value>ВОДОРОДНОЕ ОХРУПЧИВАНИЕ;ИЗНАШИВАНИЕ;КОРРОЗИЯ МЕСТНАЯ;КОРРОЗИЯ СТРУКТУРНАЯ;КОРРОЗИОННОЕ РАСТРЕСКИВАНИЕ;КОРРОЗИОННАЯ УСТАЛОСТЬ;МЕХАНИЧЕСКАЯ УСТАЛОСТЬ;ЭРОЗИЯ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Коэффициент уверенности </Name>
+			<ShortName>meh-cf</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+	</Slots>
+</Template>
+<Template>
+	<ID>T0016</ID>
+	<Name>Наблюдаемое разрушение</Name>
+	<ShortName>exist-des</ShortName>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Slots>
+		<Slot>
+			<Name>Наименование</Name>
+			<ShortName>caption-des</ShortName>
+			<Description></Description>
+			<Value>;ТРЕЩИНА (Ы) - НЕДОПУСТИМАЯ (ЫЕ)</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Источник</Name>
+			<ShortName>des-istochnik</ShortName>
+			<Description></Description>
+			<Value>;ПОВРЕЖДЕНИЕ ПОВЕРХНОСТИ;ОТВЕРСТИЕ (КОНЦЕНТРАЦИЯ НАПРЯЖЕНИЯ БОЛЕЕ 2)</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Местоположение</Name>
+			<ShortName>des-mestopolozenie</ShortName>
+			<Description></Description>
+			<Value>;НА ПОВЕРХНОСТИ;НА ВНЕШНЕЙ ПОВЕРХНОСТИ;НА ВНУТРЕННЕЙ ПОВЕРХНОСТИ;БЛИЗЛЕЖАЩИЕ ЗОНЫ ТЕРМИЧЕСКОГО ВЛИЯНИЯ;НА ПОВЕРХНОСТИ, В ПРЕДЕЛАХ ОДНОЙ ЗОНЫ ТЕРМИЧЕСКОГО ВЛИЯНИЯ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Ориентация плоскости трещины по отношению к максимальным растягивающим напряжениям </Name>
+			<ShortName>des-orientacia</ShortName>
+			<Description></Description>
+			<Value>;ПЕРПЕНДИКУЛЯРНО;ПРОДОЛЬНО</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Форма в изломе</Name>
+			<ShortName>des-forma</ShortName>
+			<Description></Description>
+			<Value>;ПОЛУЭЛЛИПТИЧЕСКАЯ;ПСЕВДОПОЛУЭЛЛИПТИЧЕСКАЯ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Количество повреждений, близких по размеру</Name>
+			<ShortName>des-kolichestvo</ShortName>
+			<Description></Description>
+			<Value>;ОДИНОЧНЫЕ;ПОЛЕ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Направление по отношению к главной оси</Name>
+			<ShortName>des-napravlenie</ShortName>
+			<Description></Description>
+			<Value>;ПРОДОЛЬНЫЕ;ПОПЕРЕЧНЫЕ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Глубина трещин (ы) </Name>
+			<ShortName>des-crack-glubina</ShortName>
+			<Description></Description>
+			<Value>;КРИТИЧЕСКАЯ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Концентрация напряжений</Name>
+			<ShortName>des-koncentracia-naprazheniy</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Коэффициент уверенности</Name>
+			<ShortName>des-cf</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+	</Slots>
+</Template>
+<Template>
+	<ID>T0017</ID>
+	<Name>Наблюдаемый механизм отказа</Name>
+	<ShortName>exist-meh-fail</ShortName>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Slots>
+		<Slot>
+			<Name>Наименование</Name>
+			<ShortName>caption-meh</ShortName>
+			<Description></Description>
+			<Value>ВОДОРОДНОЕ ОХРУПЧИВАНИЕ;ИЗНАШИВАНИЕ;КОРРОЗИЯ МЕСТНАЯ;КОРРОЗИЯ СТРУКТУРНАЯ;КОРРОЗИОННОЕ РАСТРЕСКИВАНИЕ;КОРРОЗИОННАЯ УСТАЛОСТЬ;МЕХАНИЧЕСКАЯ УСТАЛОСТЬ;ЭРОЗИЯ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Коэффициент уверенности </Name>
+			<ShortName>meh-cf</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+	</Slots>
+</Template>
+<Template>
+	<ID>T0018</ID>
+	<Name>Наблюдаемые параметры отказа</Name>
+	<ShortName>exist-fail</ShortName>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Slots>
+		<Slot>
+			<Name>Наименование разрушения</Name>
+			<ShortName>caption-fail</ShortName>
+			<Description></Description>
+			<Value>;СКВОЗНАЯ ТРЕЩИНА;ХРУПКОЕ;ВЯЗКОЕ;КВАЗИХРУПКОЕ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Источник</Name>
+			<ShortName>fail-istochnik</ShortName>
+			<Description></Description>
+			<Value>;ПОВРЕЖДЕНИЕ ПОВЕРХНОСТИ;ОТВЕРСТИЕ (КОНЦЕНТРАЦИЯ НАПРЯЖЕНИЯ БОЛЕЕ 2);КОНСТРУКТИВНЫЙ КОНЦЕНТРАТОР НАПРЯЖЕНИЙ ОБРАЗОВАННЫЙ ПЕРЕСЕЧЕНИЕМ ОТВЕРСТИЙ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Местоположение</Name>
+			<ShortName>fail-mestopolozenie</ShortName>
+			<Description></Description>
+			<Value>;НА ПОВЕРХНОСТИ;НА ВНЕШНЕЙ ПОВЕРХНОСТИ;НА ВНУТРЕННЕЙ ПОВЕРХНОСТИ;БЛИЗЛЕЖАЩИЕ ЗОНЫ ТЕРМИЧЕСКОГО ВЛИЯНИЯ;НА ПОВЕРХНОСТИ, В ПРЕДЕЛАХ ОДНОЙ ЗОНЫ ТЕРМИЧЕСКОГО ВЛИЯНИЯ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Ориентация плоскости трещины по отношению к максимальным растягивающим напряжениям</Name>
+			<ShortName>fail-orientacia</ShortName>
+			<Description></Description>
+			<Value>;ПЕРПЕНДИКУЛЯРНО</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Форма в изломе</Name>
+			<ShortName>fail-forma</ShortName>
+			<Description></Description>
+			<Value>ПОЛУЭЛЛИПТИЧЕСКАЯ;ПСЕВДОПОЛУЭЛЛИПТИЧЕСКАЯ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Количество повреждений, близких по размеру</Name>
+			<ShortName>fail-kolichestvo</ShortName>
+			<Description></Description>
+			<Value>;ОДИНОЧНЫЕ;ПОЛЕ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Направление по отношению к главной оси</Name>
+			<ShortName>fail-napravlenie</ShortName>
+			<Description></Description>
+			<Value>;ПРОДОЛЬНЫЕ;ПОПЕРЕЧНЫЕ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Раскрытие трещин (ы) </Name>
+			<ShortName>fail-crack-opening</ShortName>
+			<Description></Description>
+			<Value>0,2</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Концентрация напряжений</Name>
+			<ShortName>fail-koncentracia-naprazheniy</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Критерий хрупкого разрушения</Name>
+			<ShortName>fail-kriteriy-chrupkogo-des</ShortName>
+			<Description></Description>
+			<Value>Псевдополуэллиптическая  трещина достигла критического размера  раньше чем стала сквозной</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Проявления отказа</Name>
+			<ShortName>fail-proyavlenia</ShortName>
+			<Description></Description>
+			<Value>;УТЕЧКА РАБОЧЕЙ СРЕДЫ;УМЕРЕННЫЙ ВЫБРОС СРЕДЫ;ПОЛНЫЙ ВЫБРОС СРЕДЫ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Вид отказа</Name>
+			<ShortName>fail-vid</ShortName>
+			<Description></Description>
+			<Value>;КРИТИЧЕСКИЙ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Наблюдаемость отказа</Name>
+			<ShortName>fail-nabludaemost</ShortName>
+			<Description></Description>
+			<Value>;СКРЫТЫЙ;ЯВНЫЙ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Прогнозируемость отказа</Name>
+			<ShortName>fail-prognoz</ShortName>
+			<Description></Description>
+			<Value>;ВНЕЗАПНЫЙ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Последствия отказа</Name>
+			<ShortName>fail-posledstvia</ShortName>
+			<Description></Description>
+			<Value>;ЗНАЧИТЕЛЬНЫЕ;НЕЗНАЧИТЕЛЬНЫЕ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Коэффициент уверенности</Name>
+			<ShortName>fail-cf</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+	</Slots>
+</Template>
+</Templates>
+<Facts>
+<Fact>
+	<ID>F001</ID>
+	<Name>Материал объекта</Name>
+	<ShortName>material</ShortName>
+	<Mode>1</Mode>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Slots>
+		<Slot>
+			<Name>Наименование</Name>
+			<ShortName>caption</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Вид</Name>
+			<ShortName>type</ShortName>
+			<Description></Description>
+			<Value>СТАЛЬ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Предел прочности</Name>
+			<ShortName>mechanical-prop-strength-limit</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Предел текучести</Name>
+			<ShortName>mechanical-prop-yield-limit</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Стойкость к коррозии</Name>
+			<ShortName>resistance-prop-corrosion</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Температурная стойкость</Name>
+			<ShortName>resistance-prop-temperature</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Износоустойчивость</Name>
+			<ShortName>resistance-prop-wear</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Легированность</Name>
+			<ShortName>chemical-prop-alloying</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Структурный класс</Name>
+			<ShortName>structure-prop-class</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+		<Slot>
+			<Name>Технологическая наследственность</Name>
+			<ShortName>technological-heredity</ShortName>
+			<Description></Description>
+			<Value>НЕОДНОРОДНОСТЬ ГРАНИЦ ЗЕРЕН ИЛИ ХРУПКОСТЬ ГРАНИЦ ЗЕРЕН ИЛИ НЕОДНОРОДНОСТЬ МИКРОНАПРЯЖЕННОГО СОСТОЯНИ</Value>
+			<DataType>Number</DataType>
+			<Constraint></Constraint>
+		</Slot>
+	</Slots>
+</Fact>
+</Facts>
+<Grules>
+<Grule>
+	<ID>G001</ID>
+	<Name>Правило_выявления_механизма_повреждения</Name>
+	<ShortName>dam-mechanism-dam-ky</ShortName>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Conditions>
+		<C0>material</C0>
+		<C1>ostatochnie-napryagenia</C1>
+		<C2>mechanical-stress-const</C2>
+		<C3>heat-exchange-technological-environment</C3>
+	</Conditions>
+	<Actions>
+		<A0>exist-meh-dam</A0>
+	</Actions>
+</Grule>
+<Grule>
+	<ID>G002</ID>
+	<Name>Правило_выявления_повреждений</Name>
+	<ShortName>dam-damage-ky</ShortName>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Conditions>
+		<C0>exist-meh-dam</C0>
+	</Conditions>
+	<Actions>
+		<A0>exist-dam</A0>
+	</Actions>
+</Grule>
+<Grule>
+	<ID>G003</ID>
+	<Name>Правило_выявления_механизма_разрушения</Name>
+	<ShortName>des-mechanism-des-ky</ShortName>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Conditions>
+		<C0>exist-meh-dam</C0>
+		<C1>exist-dam</C1>
+	</Conditions>
+	<Actions>
+		<A0>exist-meh-des</A0>
+	</Actions>
+</Grule>
+<Grule>
+	<ID>G004</ID>
+	<Name>Правило_выявления_разрушений</Name>
+	<ShortName>des-destruction-ky</ShortName>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Conditions>
+		<C0>exist-meh-des</C0>
+	</Conditions>
+	<Actions>
+		<A0>exist-des</A0>
+	</Actions>
+</Grule>
+<Grule>
+	<ID>G005</ID>
+	<Name>Правило_выявления_механизма_отказа</Name>
+	<ShortName>fail-mechanism-fail-ky</ShortName>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Conditions>
+		<C0>exist-meh-des</C0>
+		<C1>exist-des</C1>
+	</Conditions>
+	<Actions>
+		<A0>exist-meh-fail</A0>
+	</Actions>
+</Grule>
+<Grule>
+	<ID>G006</ID>
+	<Name>Правило_выявления_отказа</Name>
+	<ShortName>fail-failure-ky</ShortName>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Conditions>
+		<C0>exist-meh-fail</C0>
+	</Conditions>
+	<Actions>
+		<A0>exist-fail</A0>
+	</Actions>
+</Grule>
+</Grules>
+<Rules>
+<Rule>
+	<ID>R001</ID>
+	<Name>Правило_выявления_механизма_повреждения</Name>
+	<ShortName>dam-mechanism-dam-ky</ShortName>
+	<Description>Описание правила: Правило_выявления_механизма_повреждения</Description>
+	<Salience>0</Salience>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<Conditions>
+		<Condition>
+			<Name>Наименование</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Наименование</Name>
+				<ShortName>caption</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Наименование</Name>
+					<ShortName>caption</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Вид</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Вид</Name>
+				<ShortName>type</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Вид</Name>
+					<ShortName>type</ShortName>
+					<Description></Description>
+					<Value>СТАЛЬ</Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Предел прочности</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Предел прочности</Name>
+				<ShortName>mechanical-prop-strength-limit</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Предел прочности</Name>
+					<ShortName>mechanical-prop-strength-limit</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Предел текучести</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Предел текучести</Name>
+				<ShortName>mechanical-prop-yield-limit</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Предел текучести</Name>
+					<ShortName>mechanical-prop-yield-limit</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Стойкость к коррозии</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Стойкость к коррозии</Name>
+				<ShortName>resistance-prop-corrosion</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Стойкость к коррозии</Name>
+					<ShortName>resistance-prop-corrosion</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Температурная стойкость</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Температурная стойкость</Name>
+				<ShortName>resistance-prop-temperature</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Температурная стойкость</Name>
+					<ShortName>resistance-prop-temperature</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Износоустойчивость</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Износоустойчивость</Name>
+				<ShortName>resistance-prop-wear</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Износоустойчивость</Name>
+					<ShortName>resistance-prop-wear</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Легированность</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Легированность</Name>
+				<ShortName>chemical-prop-alloying</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Легированность</Name>
+					<ShortName>chemical-prop-alloying</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Структурный класс</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Структурный класс</Name>
+				<ShortName>structure-prop-class</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Структурный класс</Name>
+					<ShortName>structure-prop-class</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Технологическая наследственность</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Технологическая наследственность</Name>
+				<ShortName>technological-heredity</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Технологическая наследственность</Name>
+					<ShortName>technological-heredity</ShortName>
+					<Description></Description>
+					<Value>НЕОДНОРОДНОСТЬ ГРАНИЦ ЗЕРЕН ИЛИ ХРУПКОСТЬ ГРАНИЦ ЗЕРЕН ИЛИ НЕОДНОРОДНОСТЬ МИКРОНАПРЯЖЕННОГО СОСТОЯНИЯ</Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+	</Conditions>
+		<Condition>
+			<Name>Вид</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Вид</Name>
+				<ShortName>ostN-vid</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Вид</Name>
+					<ShortName>ostN-vid</ShortName>
+					<Description></Description>
+					<Value>РАСТЯГИВАЮЩИЕ</Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Величина</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Величина</Name>
+				<ShortName>ostN-znachenie</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Величина</Name>
+					<ShortName>ostN-znachenie</ShortName>
+					<Description></Description>
+					<Value>МАКСИМАЛЬНЫЕ</Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Местоположение</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Местоположение</Name>
+				<ShortName>ostN-mestopolozenie</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Местоположение</Name>
+					<ShortName>ostN-mestopolozenie</ShortName>
+					<Description></Description>
+					<Value>НА БОКОВОЙ ИЛИ ВОГНУТОЙ ПОВЕРХНОСТИ</Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Ориентация</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Ориентация</Name>
+				<ShortName>ostN-orientacia</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Ориентация</Name>
+					<ShortName>ostN-orientacia</ShortName>
+					<Description></Description>
+					<Value>ПРОДОЛЬНЫЕ</Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Причина</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Причина</Name>
+				<ShortName>ostN-prichina</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Причина</Name>
+					<ShortName>ostN-prichina</ShortName>
+					<Description></Description>
+					<Value>ДЕФОРМАЦИЯ В ХОЛОДНОМ СОСТОЯНИИ ПРИ ГНУТЬЕ</Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+	</Conditions>
+		<Condition>
+			<Name>Наличие статических механических нагрузок</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Наличие статических механических нагрузок</Name>
+				<ShortName>stress-const-nalichie</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Наличие статических механических нагрузок</Name>
+					<ShortName>stress-const-nalichie</ShortName>
+					<Description></Description>
+					<Value>ДА</Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Вид статических нагрузок </Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Вид статических нагрузок </Name>
+				<ShortName>stress-const-type</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Вид статических нагрузок </Name>
+					<ShortName>stress-const-type</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Величина нагрузок</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Величина нагрузок</Name>
+				<ShortName>stress-value</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Величина нагрузок</Name>
+					<ShortName>stress-value</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Вид напряжения</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Вид напряжения</Name>
+				<ShortName>tension-type</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Вид напряжения</Name>
+					<ShortName>tension-type</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Величина напряжения</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Величина напряжения</Name>
+				<ShortName>tension-value</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Величина напряжения</Name>
+					<ShortName>tension-value</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+	</Conditions>
+		<Condition>
+			<Name>Вид</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Вид</Name>
+				<ShortName>type</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Вид</Name>
+					<ShortName>type</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Водородный показатель (pH)</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Водородный показатель (pH)</Name>
+				<ShortName>pH</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Водородный показатель (pH)</Name>
+					<ShortName>pH</ShortName>
+					<Description></Description>
+					<Value>АКТИВНАЯ (КИСЛАЯ или ЩЕЛОЧНАЯ)</Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Общая жесткость</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Общая жесткость</Name>
+				<ShortName>obshayGestkost</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Общая жесткость</Name>
+					<ShortName>obshayGestkost</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Содержание кислорода</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Содержание кислорода</Name>
+				<ShortName>kislorod</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Содержание кислорода</Name>
+					<ShortName>kislorod</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Содержание ионов железа</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Содержание ионов железа</Name>
+				<ShortName>gelezo</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Содержание ионов железа</Name>
+					<ShortName>gelezo</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Содержание ионов хлора</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Содержание ионов хлора</Name>
+				<ShortName>chlor</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Содержание ионов хлора</Name>
+					<ShortName>chlor</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Содержание ионов серы</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Содержание ионов серы</Name>
+				<ShortName>sera</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Содержание ионов серы</Name>
+					<ShortName>sera</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Содержание ионов азота</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Содержание ионов азота</Name>
+				<ShortName>azot</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Содержание ионов азота</Name>
+					<ShortName>azot</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Содержание гидрозин-гидрат</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Содержание гидрозин-гидрат</Name>
+				<ShortName>gidrozin-gidrat</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Содержание гидрозин-гидрат</Name>
+					<ShortName>gidrozin-gidrat</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Электродный потенциал</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Электродный потенциал</Name>
+				<ShortName>elektrodniyPotencial</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Электродный потенциал</Name>
+					<ShortName>elektrodniyPotencial</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+	</Conditions>
+	<Actions>
+		<Action>
+			<Name>Вид</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Вид</Name>
+				<ShortName>type</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Вид</Name>
+					<ShortName>type</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Водородный показатель (pH)</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Водородный показатель (pH)</Name>
+				<ShortName>pH</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Водородный показатель (pH)</Name>
+					<ShortName>pH</ShortName>
+					<Description></Description>
+					<Value>АКТИВНАЯ (КИСЛАЯ или ЩЕЛОЧНАЯ)</Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Общая жесткость</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Общая жесткость</Name>
+				<ShortName>obshayGestkost</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Общая жесткость</Name>
+					<ShortName>obshayGestkost</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Содержание кислорода</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Содержание кислорода</Name>
+				<ShortName>kislorod</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Содержание кислорода</Name>
+					<ShortName>kislorod</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Содержание ионов железа</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Содержание ионов железа</Name>
+				<ShortName>gelezo</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Содержание ионов железа</Name>
+					<ShortName>gelezo</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Содержание ионов хлора</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Содержание ионов хлора</Name>
+				<ShortName>chlor</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Содержание ионов хлора</Name>
+					<ShortName>chlor</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Содержание ионов серы</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Содержание ионов серы</Name>
+				<ShortName>sera</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Содержание ионов серы</Name>
+					<ShortName>sera</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Содержание ионов азота</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Содержание ионов азота</Name>
+				<ShortName>azot</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Содержание ионов азота</Name>
+					<ShortName>azot</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Содержание гидрозин-гидрат</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Содержание гидрозин-гидрат</Name>
+				<ShortName>gidrozin-gidrat</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Содержание гидрозин-гидрат</Name>
+					<ShortName>gidrozin-gidrat</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Электродный потенциал</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Электродный потенциал</Name>
+				<ShortName>elektrodniyPotencial</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Электродный потенциал</Name>
+					<ShortName>elektrodniyPotencial</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+	</Actions>
+</Rule>
+<Rule>
+	<ID>R002</ID>
+	<Name>Правило_выявления_повреждений</Name>
+	<ShortName>dam-damage-ky</ShortName>
+	<Description>Описание правила: Правило_выявления_повреждений</Description>
+	<Salience>0</Salience>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<Conditions>
+		<Condition>
+			<Name>Наименование</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Наименование</Name>
+				<ShortName>caption-meh</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Наименование</Name>
+					<ShortName>caption-meh</ShortName>
+					<Description></Description>
+					<Value>КОРРОЗИОННОЕ РАСТРЕСКИВАНИЕ</Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Коэффициент уверенности </Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Коэффициент уверенности </Name>
+				<ShortName>meh-cf</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Коэффициент уверенности </Name>
+					<ShortName>meh-cf</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+	</Conditions>
+	<Actions>
+		<Action>
+			<Name>Наименование</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Наименование</Name>
+				<ShortName>caption-meh</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Наименование</Name>
+					<ShortName>caption-meh</ShortName>
+					<Description></Description>
+					<Value>КОРРОЗИОННОЕ РАСТРЕСКИВАНИЕ</Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Коэффициент уверенности </Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Коэффициент уверенности </Name>
+				<ShortName>meh-cf</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Коэффициент уверенности </Name>
+					<ShortName>meh-cf</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+	</Actions>
+</Rule>
+<Rule>
+	<ID>R003</ID>
+	<Name>Правило_выявления_механизма_разрушения</Name>
+	<ShortName>des-mechanism-des-ky</ShortName>
+	<Description>Описание правила: Правило_выявления_механизма_разрушения</Description>
+	<Salience>0</Salience>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<Conditions>
+		<Condition>
+			<Name>Наименование</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Наименование</Name>
+				<ShortName>caption-meh</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Наименование</Name>
+					<ShortName>caption-meh</ShortName>
+					<Description></Description>
+					<Value>КОРРОЗИОННОЕ РАСТРЕСКИВАНИЕ</Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Коэффициент уверенности </Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Коэффициент уверенности </Name>
+				<ShortName>meh-cf</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Коэффициент уверенности </Name>
+					<ShortName>meh-cf</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+	</Conditions>
+		<Condition>
+			<Name>Наименование </Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Наименование </Name>
+				<ShortName>caption-dam</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Наименование </Name>
+					<ShortName>caption-dam</ShortName>
+					<Description></Description>
+					<Value>ТРЕЩИНА (Ы) - ПОВРЕЖДЕНИЕ</Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Тип трещинообразования</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Тип трещинообразования</Name>
+				<ShortName>dam-type-treshinoobrazovaniy</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Тип трещинообразования</Name>
+					<ShortName>dam-type-treshinoobrazovaniy</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Источник</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Источник</Name>
+				<ShortName>dam-istochnik</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Источник</Name>
+					<ShortName>dam-istochnik</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Местоположение</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Местоположение</Name>
+				<ShortName>dam-mestopolozenie</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Местоположение</Name>
+					<ShortName>dam-mestopolozenie</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Ориентация плоскости трещины по отношению к максимальным растягивающим напряжениям</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Ориентация плоскости трещины по отношению к максимальным растягивающим напряжениям</Name>
+				<ShortName>dam-orientacia</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Ориентация плоскости трещины по отношению к максимальным растягивающим напряжениям</Name>
+					<ShortName>dam-orientacia</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Глубина</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Глубина</Name>
+				<ShortName>dam-glubina</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Глубина</Name>
+					<ShortName>dam-glubina</ShortName>
+					<Description></Description>
+					<Value>менее 4</Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Длина</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Длина</Name>
+				<ShortName>dam-dlina</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Длина</Name>
+					<ShortName>dam-dlina</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Диаметр</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Диаметр</Name>
+				<ShortName>dam-diametr</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Диаметр</Name>
+					<ShortName>dam-diametr</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Форма</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Форма</Name>
+				<ShortName>dam-forma</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Форма</Name>
+					<ShortName>dam-forma</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Форма в изломе</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Форма в изломе</Name>
+				<ShortName>dam-forma-v-izlome</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Форма в изломе</Name>
+					<ShortName>dam-forma-v-izlome</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Количество повреждений, близких по размеру</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Количество повреждений, близких по размеру</Name>
+				<ShortName>dam-kolichestvo</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Количество повреждений, близких по размеру</Name>
+					<ShortName>dam-kolichestvo</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Распределение</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Распределение</Name>
+				<ShortName>dam-distribution</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Распределение</Name>
+					<ShortName>dam-distribution</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Величина раскрытия</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Величина раскрытия</Name>
+				<ShortName>dam-velichina-raskritia</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Величина раскрытия</Name>
+					<ShortName>dam-velichina-raskritia</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Критерий течь перед разрушением</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Критерий течь перед разрушением</Name>
+				<ShortName>dam-tech-pered-razrusheniem</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Критерий течь перед разрушением</Name>
+					<ShortName>dam-tech-pered-razrusheniem</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Направление по отношению к главной оси</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Направление по отношению к главной оси</Name>
+				<ShortName>dam-napravlenie</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Направление по отношению к главной оси</Name>
+					<ShortName>dam-napravlenie</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Коэффициент уверенности</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Коэффициент уверенности</Name>
+				<ShortName>dam-cf</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Коэффициент уверенности</Name>
+					<ShortName>dam-cf</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+	</Conditions>
+	<Actions>
+		<Action>
+			<Name>Наименование </Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Наименование </Name>
+				<ShortName>caption-dam</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Наименование </Name>
+					<ShortName>caption-dam</ShortName>
+					<Description></Description>
+					<Value>ТРЕЩИНА (Ы) - ПОВРЕЖДЕНИЕ</Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Тип трещинообразования</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Тип трещинообразования</Name>
+				<ShortName>dam-type-treshinoobrazovaniy</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Тип трещинообразования</Name>
+					<ShortName>dam-type-treshinoobrazovaniy</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Источник</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Источник</Name>
+				<ShortName>dam-istochnik</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Источник</Name>
+					<ShortName>dam-istochnik</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Местоположение</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Местоположение</Name>
+				<ShortName>dam-mestopolozenie</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Местоположение</Name>
+					<ShortName>dam-mestopolozenie</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Ориентация плоскости трещины по отношению к максимальным растягивающим напряжениям</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Ориентация плоскости трещины по отношению к максимальным растягивающим напряжениям</Name>
+				<ShortName>dam-orientacia</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Ориентация плоскости трещины по отношению к максимальным растягивающим напряжениям</Name>
+					<ShortName>dam-orientacia</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Глубина</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Глубина</Name>
+				<ShortName>dam-glubina</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Глубина</Name>
+					<ShortName>dam-glubina</ShortName>
+					<Description></Description>
+					<Value>менее 4</Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Длина</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Длина</Name>
+				<ShortName>dam-dlina</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Длина</Name>
+					<ShortName>dam-dlina</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Диаметр</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Диаметр</Name>
+				<ShortName>dam-diametr</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Диаметр</Name>
+					<ShortName>dam-diametr</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Форма</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Форма</Name>
+				<ShortName>dam-forma</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Форма</Name>
+					<ShortName>dam-forma</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Форма в изломе</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Форма в изломе</Name>
+				<ShortName>dam-forma-v-izlome</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Форма в изломе</Name>
+					<ShortName>dam-forma-v-izlome</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Количество повреждений, близких по размеру</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Количество повреждений, близких по размеру</Name>
+				<ShortName>dam-kolichestvo</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Количество повреждений, близких по размеру</Name>
+					<ShortName>dam-kolichestvo</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Распределение</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Распределение</Name>
+				<ShortName>dam-distribution</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Распределение</Name>
+					<ShortName>dam-distribution</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Величина раскрытия</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Величина раскрытия</Name>
+				<ShortName>dam-velichina-raskritia</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Величина раскрытия</Name>
+					<ShortName>dam-velichina-raskritia</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Критерий течь перед разрушением</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Критерий течь перед разрушением</Name>
+				<ShortName>dam-tech-pered-razrusheniem</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Критерий течь перед разрушением</Name>
+					<ShortName>dam-tech-pered-razrusheniem</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Направление по отношению к главной оси</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Направление по отношению к главной оси</Name>
+				<ShortName>dam-napravlenie</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Направление по отношению к главной оси</Name>
+					<ShortName>dam-napravlenie</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Коэффициент уверенности</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Коэффициент уверенности</Name>
+				<ShortName>dam-cf</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Коэффициент уверенности</Name>
+					<ShortName>dam-cf</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+	</Actions>
+</Rule>
+<Rule>
+	<ID>R004</ID>
+	<Name>Правило_выявления_разрушений</Name>
+	<ShortName>des-destruction-ky</ShortName>
+	<Description>Описание правила: Правило_выявления_разрушений</Description>
+	<Salience>0</Salience>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<Conditions>
+		<Condition>
+			<Name>Наименование</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Наименование</Name>
+				<ShortName>caption-meh</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Наименование</Name>
+					<ShortName>caption-meh</ShortName>
+					<Description></Description>
+					<Value>КОРРОЗИОННОЕ РАСТРЕСКИВАНИЕ</Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Коэффициент уверенности </Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Коэффициент уверенности </Name>
+				<ShortName>meh-cf</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Коэффициент уверенности </Name>
+					<ShortName>meh-cf</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+	</Conditions>
+	<Actions>
+		<Action>
+			<Name>Наименование</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Наименование</Name>
+				<ShortName>caption-meh</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Наименование</Name>
+					<ShortName>caption-meh</ShortName>
+					<Description></Description>
+					<Value>КОРРОЗИОННОЕ РАСТРЕСКИВАНИЕ</Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Коэффициент уверенности </Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Коэффициент уверенности </Name>
+				<ShortName>meh-cf</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Коэффициент уверенности </Name>
+					<ShortName>meh-cf</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+	</Actions>
+</Rule>
+<Rule>
+	<ID>R005</ID>
+	<Name>Правило_выявления_механизма_отказа</Name>
+	<ShortName>fail-mechanism-fail-ky</ShortName>
+	<Description>Описание правила: Правило_выявления_механизма_отказа</Description>
+	<Salience>0</Salience>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<Conditions>
+		<Condition>
+			<Name>Наименование</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Наименование</Name>
+				<ShortName>caption-meh</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Наименование</Name>
+					<ShortName>caption-meh</ShortName>
+					<Description></Description>
+					<Value>КОРРОЗИОННОЕ РАСТРЕСКИВАНИЕ</Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Коэффициент уверенности </Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Коэффициент уверенности </Name>
+				<ShortName>meh-cf</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Коэффициент уверенности </Name>
+					<ShortName>meh-cf</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+	</Conditions>
+		<Condition>
+			<Name>Наименование</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Наименование</Name>
+				<ShortName>caption-des</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Наименование</Name>
+					<ShortName>caption-des</ShortName>
+					<Description></Description>
+					<Value>ТРЕЩИНА (Ы) - НЕДОПУСТИМАЯ (ЫЕ)</Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Источник</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Источник</Name>
+				<ShortName>des-istochnik</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Источник</Name>
+					<ShortName>des-istochnik</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Местоположение</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Местоположение</Name>
+				<ShortName>des-mestopolozenie</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Местоположение</Name>
+					<ShortName>des-mestopolozenie</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Ориентация плоскости трещины по отношению к максимальным растягивающим напряжениям </Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Ориентация плоскости трещины по отношению к максимальным растягивающим напряжениям </Name>
+				<ShortName>des-orientacia</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Ориентация плоскости трещины по отношению к максимальным растягивающим напряжениям </Name>
+					<ShortName>des-orientacia</ShortName>
+					<Description></Description>
+					<Value>ПЕРПЕНДИКУЛЯРНО</Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Форма в изломе</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Форма в изломе</Name>
+				<ShortName>des-forma</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Форма в изломе</Name>
+					<ShortName>des-forma</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Количество повреждений, близких по размеру</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Количество повреждений, близких по размеру</Name>
+				<ShortName>des-kolichestvo</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Количество повреждений, близких по размеру</Name>
+					<ShortName>des-kolichestvo</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Направление по отношению к главной оси</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Направление по отношению к главной оси</Name>
+				<ShortName>des-napravlenie</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Направление по отношению к главной оси</Name>
+					<ShortName>des-napravlenie</ShortName>
+					<Description></Description>
+					<Value>ПРОДОЛЬНЫЕ</Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Глубина трещин (ы) </Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Глубина трещин (ы) </Name>
+				<ShortName>des-crack-glubina</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Глубина трещин (ы) </Name>
+					<ShortName>des-crack-glubina</ShortName>
+					<Description></Description>
+					<Value>КРИТИЧЕСКАЯ</Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Концентрация напряжений</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Концентрация напряжений</Name>
+				<ShortName>des-koncentracia-naprazheniy</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Концентрация напряжений</Name>
+					<ShortName>des-koncentracia-naprazheniy</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Коэффициент уверенности</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Коэффициент уверенности</Name>
+				<ShortName>des-cf</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Коэффициент уверенности</Name>
+					<ShortName>des-cf</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+	</Conditions>
+	<Actions>
+		<Action>
+			<Name>Наименование</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Наименование</Name>
+				<ShortName>caption-des</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Наименование</Name>
+					<ShortName>caption-des</ShortName>
+					<Description></Description>
+					<Value>ТРЕЩИНА (Ы) - НЕДОПУСТИМАЯ (ЫЕ)</Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Источник</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Источник</Name>
+				<ShortName>des-istochnik</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Источник</Name>
+					<ShortName>des-istochnik</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Местоположение</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Местоположение</Name>
+				<ShortName>des-mestopolozenie</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Местоположение</Name>
+					<ShortName>des-mestopolozenie</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Ориентация плоскости трещины по отношению к максимальным растягивающим напряжениям </Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Ориентация плоскости трещины по отношению к максимальным растягивающим напряжениям </Name>
+				<ShortName>des-orientacia</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Ориентация плоскости трещины по отношению к максимальным растягивающим напряжениям </Name>
+					<ShortName>des-orientacia</ShortName>
+					<Description></Description>
+					<Value>ПЕРПЕНДИКУЛЯРНО</Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Форма в изломе</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Форма в изломе</Name>
+				<ShortName>des-forma</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Форма в изломе</Name>
+					<ShortName>des-forma</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Количество повреждений, близких по размеру</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Количество повреждений, близких по размеру</Name>
+				<ShortName>des-kolichestvo</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Количество повреждений, близких по размеру</Name>
+					<ShortName>des-kolichestvo</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Направление по отношению к главной оси</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Направление по отношению к главной оси</Name>
+				<ShortName>des-napravlenie</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Направление по отношению к главной оси</Name>
+					<ShortName>des-napravlenie</ShortName>
+					<Description></Description>
+					<Value>ПРОДОЛЬНЫЕ</Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Глубина трещин (ы) </Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Глубина трещин (ы) </Name>
+				<ShortName>des-crack-glubina</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Глубина трещин (ы) </Name>
+					<ShortName>des-crack-glubina</ShortName>
+					<Description></Description>
+					<Value>КРИТИЧЕСКАЯ</Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Концентрация напряжений</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Концентрация напряжений</Name>
+				<ShortName>des-koncentracia-naprazheniy</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Концентрация напряжений</Name>
+					<ShortName>des-koncentracia-naprazheniy</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Коэффициент уверенности</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Коэффициент уверенности</Name>
+				<ShortName>des-cf</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Коэффициент уверенности</Name>
+					<ShortName>des-cf</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+	</Actions>
+</Rule>
+<Rule>
+	<ID>R006</ID>
+	<Name>Правило_выявления_отказа</Name>
+	<ShortName>fail-failure-ky</ShortName>
+	<Description>Описание правила: Правило_выявления_отказа</Description>
+	<Salience>0</Salience>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<Conditions>
+		<Condition>
+			<Name>Наименование</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Наименование</Name>
+				<ShortName>caption-meh</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Наименование</Name>
+					<ShortName>caption-meh</ShortName>
+					<Description></Description>
+					<Value>КОРРОЗИОННОЕ РАСТРЕСКИВАНИЕ</Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+		<Condition>
+			<Name>Коэффициент уверенности </Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Коэффициент уверенности </Name>
+				<ShortName>meh-cf</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Коэффициент уверенности </Name>
+					<ShortName>meh-cf</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+	</Conditions>
+	<Actions>
+		<Action>
+			<Name>Наименование</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Наименование</Name>
+				<ShortName>caption-meh</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Наименование</Name>
+					<ShortName>caption-meh</ShortName>
+					<Description></Description>
+					<Value>КОРРОЗИОННОЕ РАСТРЕСКИВАНИЕ</Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Коэффициент уверенности </Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Коэффициент уверенности </Name>
+				<ShortName>meh-cf</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Коэффициент уверенности </Name>
+					<ShortName>meh-cf</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+	</Actions>
+		<Action>
+			<Name>Наименование</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Наименование</Name>
+				<ShortName>caption-meh</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Наименование</Name>
+					<ShortName>caption-meh</ShortName>
+					<Description></Description>
+					<Value>КОРРОЗИОННОЕ РАСТРЕСКИВАНИЕ</Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Коэффициент уверенности </Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Коэффициент уверенности </Name>
+				<ShortName>meh-cf</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Коэффициент уверенности </Name>
+					<ShortName>meh-cf</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+	</Actions>
+		<Action>
+			<Name>Наименование</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Наименование</Name>
+				<ShortName>caption-meh</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Наименование</Name>
+					<ShortName>caption-meh</ShortName>
+					<Description></Description>
+					<Value>КОРРОЗИОННОЕ РАСТРЕСКИВАНИЕ</Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+		<Action>
+			<Name>Коэффициент уверенности </Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Коэффициент уверенности </Name>
+				<ShortName>meh-cf</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Коэффициент уверенности </Name>
+					<ShortName>meh-cf</ShortName>
+					<Description></Description>
+					<Value></Value>
+					<DataType>0</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+	</Actions>
+</Rule>
+</Rules>
+<Functions/>
+<Tasks/>
+<TempPackageList/>
+<FactPackageList/>
+<RulePackageList/>
+<GRulePackageList/>
+</KnowledgeBase>
+</Structure>

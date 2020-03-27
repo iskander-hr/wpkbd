@@ -1,0 +1,976 @@
+<Structure>
+<KnowledgeBase>
+	<ID>20</ID>
+	<Name>Прогнозирование урожая</Name>
+	<ShortName>Prognozirovanie-urozhaya</ShortName>
+	<Kind>0</Kind>
+	<Description>База знаний добавлена из файла</Description>
+<Vars/>
+<Templates>
+<Template>
+	<ID>T001</ID>
+	<Name>Осадки</Name>
+	<ShortName>Osadki</ShortName>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Slots>
+		<Slot>
+			<Name>Количество</Name>
+			<ShortName>Kolichestvo</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>String</DataType>
+			<Constraint></Constraint>
+		</Slot>
+	</Slots>
+</Template>
+<Template>
+	<ID>T002</ID>
+	<Name>Температура воздуха</Name>
+	<ShortName>Temperatura-vozdukha</ShortName>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Slots>
+		<Slot>
+			<Name>Значение</Name>
+			<ShortName>Znachenie</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>String</DataType>
+			<Constraint></Constraint>
+		</Slot>
+	</Slots>
+</Template>
+<Template>
+	<ID>T003</ID>
+	<Name>Погодные условия</Name>
+	<ShortName>Pogodnye-usloviya</ShortName>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Slots>
+		<Slot>
+			<Name>Тип</Name>
+			<ShortName>Tip</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>String</DataType>
+			<Constraint></Constraint>
+		</Slot>
+	</Slots>
+</Template>
+<Template>
+	<ID>T004</ID>
+	<Name>Частота полива</Name>
+	<ShortName>Chastota-poliva</ShortName>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Slots>
+		<Slot>
+			<Name>Значение</Name>
+			<ShortName>Znachenie</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>String</DataType>
+			<Constraint></Constraint>
+		</Slot>
+	</Slots>
+</Template>
+<Template>
+	<ID>T005</ID>
+	<Name>Состояние почвы</Name>
+	<ShortName>Sostoyanie-pochvy</ShortName>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Slots>
+		<Slot>
+			<Name>Состояние</Name>
+			<ShortName>Sostoyanie</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>String</DataType>
+			<Constraint></Constraint>
+		</Slot>
+	</Slots>
+</Template>
+<Template>
+	<ID>T006</ID>
+	<Name>Урожай</Name>
+	<ShortName>Urozhay</ShortName>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Slots>
+		<Slot>
+			<Name>Показатель</Name>
+			<ShortName>Pokazatel</ShortName>
+			<Description></Description>
+			<Value></Value>
+			<DataType>String</DataType>
+			<Constraint></Constraint>
+		</Slot>
+	</Slots>
+</Template>
+</Templates>
+<Facts>
+<Fact>
+	<ID>F001</ID>
+	<Name>Частота полива</Name>
+	<ShortName>Chastota-poliva</ShortName>
+	<Mode>1</Mode>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Slots>
+		<Slot>
+			<Name>Значение</Name>
+			<ShortName>Znachenie</ShortName>
+			<Description></Description>
+			<Value>Часто</Value>
+			<DataType>String</DataType>
+			<Constraint></Constraint>
+		</Slot>
+	</Slots>
+</Fact>
+<Fact>
+	<ID>F002</ID>
+	<Name>Осадки</Name>
+	<ShortName>Osadki</ShortName>
+	<Mode>1</Mode>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Slots>
+		<Slot>
+			<Name>Количество</Name>
+			<ShortName>Kolichestvo</ShortName>
+			<Description></Description>
+			<Value>Обильные</Value>
+			<DataType>String</DataType>
+			<Constraint></Constraint>
+		</Slot>
+	</Slots>
+</Fact>
+<Fact>
+	<ID>F003</ID>
+	<Name>Температура воздуха</Name>
+	<ShortName>Temperatura-vozdukha</ShortName>
+	<Mode>1</Mode>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Slots>
+		<Slot>
+			<Name>Значение</Name>
+			<ShortName>Znachenie</ShortName>
+			<Description></Description>
+			<Value>11-30</Value>
+			<DataType>String</DataType>
+			<Constraint></Constraint>
+		</Slot>
+	</Slots>
+</Fact>
+</Facts>
+<Grules>
+<Grule>
+	<ID>G001</ID>
+	<Name>Температура воздуха+Осадки>Погодные условия</Name>
+	<ShortName>Temperatura-vozdukha+Osadki>Pogodnye-usloviya</ShortName>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Conditions>
+		<C0>Temperatura-vozdukha</C0>
+		<C1>Osadki</C1>
+	</Conditions>
+	<Actions>
+		<A0>Pogodnye-usloviya</A0>
+	</Actions>
+</Grule>
+<Grule>
+	<ID>G002</ID>
+	<Name>Погодные условия+Частота полива>Состояние почвы</Name>
+	<ShortName>Pogodnye-usloviya+Chastota-poliva>Sostoyanie-pochvy</ShortName>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Conditions>
+		<C0>Pogodnye-usloviya</C0>
+		<C1>Chastota-poliva</C1>
+	</Conditions>
+	<Actions>
+		<A0>Sostoyanie-pochvy</A0>
+	</Actions>
+</Grule>
+<Grule>
+	<ID>G003</ID>
+	<Name>Состояние почвы>Урожай</Name>
+	<ShortName>Sostoyanie-pochvy>Urozhay</ShortName>
+	<Description></Description>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<DrawParams></DrawParams>
+	<Conditions>
+		<C0>Sostoyanie-pochvy</C0>
+	</Conditions>
+	<Actions>
+		<A0>Urozhay</A0>
+	</Actions>
+</Grule>
+</Grules>
+<Rules>
+<Rule>
+	<ID>R001</ID>
+	<Name>Температура воздуха+Осадки>Погодные условия_1</Name>
+	<ShortName>Temperatura-vozdukha+Osadki>Pogodnye-usloviya-1</ShortName>
+	<Description>Описание правила: Температура воздуха+Осадки>Погодные условия_1</Description>
+	<Salience>0</Salience>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<Conditions>
+		<Condition>
+			<Name>Значение</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Значение</Name>
+				<ShortName>Znachenie</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Значение</Name>
+					<ShortName>Znachenie</ShortName>
+					<Description></Description>
+					<Value>0-10</Value>
+					<DataType>1</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+	</Conditions>
+		<Condition>
+			<Name>Количество</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Количество</Name>
+				<ShortName>Kolichestvo</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Количество</Name>
+					<ShortName>Kolichestvo</ShortName>
+					<Description></Description>
+					<Value>Малые</Value>
+					<DataType>1</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+	</Conditions>
+	<Actions>
+		<Action>
+			<Name>Количество</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Количество</Name>
+				<ShortName>Kolichestvo</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Количество</Name>
+					<ShortName>Kolichestvo</ShortName>
+					<Description></Description>
+					<Value>Малые</Value>
+					<DataType>1</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+	</Actions>
+</Rule>
+<Rule>
+	<ID>R002</ID>
+	<Name>Температура воздуха+Осадки>Погодные условия_2</Name>
+	<ShortName>Temperatura-vozdukha+Osadki>Pogodnye-usloviya-2</ShortName>
+	<Description>Описание правила: Температура воздуха+Осадки>Погодные условия_2</Description>
+	<Salience>0</Salience>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<Conditions>
+		<Condition>
+			<Name>Значение</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Значение</Name>
+				<ShortName>Znachenie</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Значение</Name>
+					<ShortName>Znachenie</ShortName>
+					<Description></Description>
+					<Value>11-30</Value>
+					<DataType>1</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+	</Conditions>
+		<Condition>
+			<Name>Количество</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Количество</Name>
+				<ShortName>Kolichestvo</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Количество</Name>
+					<ShortName>Kolichestvo</ShortName>
+					<Description></Description>
+					<Value>Малые</Value>
+					<DataType>1</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+	</Conditions>
+	<Actions>
+		<Action>
+			<Name>Количество</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Количество</Name>
+				<ShortName>Kolichestvo</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Количество</Name>
+					<ShortName>Kolichestvo</ShortName>
+					<Description></Description>
+					<Value>Малые</Value>
+					<DataType>1</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+	</Actions>
+</Rule>
+<Rule>
+	<ID>R003</ID>
+	<Name>Температура воздуха+Осадки>Погодные условия_3</Name>
+	<ShortName>Temperatura-vozdukha+Osadki>Pogodnye-usloviya-3</ShortName>
+	<Description>Описание правила: Температура воздуха+Осадки>Погодные условия_3</Description>
+	<Salience>0</Salience>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<Conditions>
+		<Condition>
+			<Name>Значение</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Значение</Name>
+				<ShortName>Znachenie</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Значение</Name>
+					<ShortName>Znachenie</ShortName>
+					<Description></Description>
+					<Value>11-30</Value>
+					<DataType>1</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+	</Conditions>
+		<Condition>
+			<Name>Количество</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Количество</Name>
+				<ShortName>Kolichestvo</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Количество</Name>
+					<ShortName>Kolichestvo</ShortName>
+					<Description></Description>
+					<Value>Обильные</Value>
+					<DataType>1</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+	</Conditions>
+	<Actions>
+		<Action>
+			<Name>Количество</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Количество</Name>
+				<ShortName>Kolichestvo</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Количество</Name>
+					<ShortName>Kolichestvo</ShortName>
+					<Description></Description>
+					<Value>Обильные</Value>
+					<DataType>1</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+	</Actions>
+</Rule>
+<Rule>
+	<ID>R004</ID>
+	<Name>Погодные условия+Частота полива>Состояние почвы_1</Name>
+	<ShortName>Pogodnye-usloviya+Chastota-poliva>Sostoyanie-pochvy-1</ShortName>
+	<Description>Описание правила: Погодные условия+Частота полива>Состояние почвы_1</Description>
+	<Salience>0</Salience>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<Conditions>
+		<Condition>
+			<Name>Тип</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Тип</Name>
+				<ShortName>Tip</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Тип</Name>
+					<ShortName>Tip</ShortName>
+					<Description></Description>
+					<Value>Теплая, влажная погода</Value>
+					<DataType>1</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+	</Conditions>
+		<Condition>
+			<Name>Значение</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Значение</Name>
+				<ShortName>Znachenie</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Значение</Name>
+					<ShortName>Znachenie</ShortName>
+					<Description></Description>
+					<Value>Часто</Value>
+					<DataType>1</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+	</Conditions>
+	<Actions>
+		<Action>
+			<Name>Значение</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Значение</Name>
+				<ShortName>Znachenie</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Значение</Name>
+					<ShortName>Znachenie</ShortName>
+					<Description></Description>
+					<Value>Часто</Value>
+					<DataType>1</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+	</Actions>
+</Rule>
+<Rule>
+	<ID>R005</ID>
+	<Name>Погодные условия+Частота полива>Состояние почвы_2</Name>
+	<ShortName>Pogodnye-usloviya+Chastota-poliva>Sostoyanie-pochvy-2</ShortName>
+	<Description>Описание правила: Погодные условия+Частота полива>Состояние почвы_2</Description>
+	<Salience>0</Salience>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<Conditions>
+		<Condition>
+			<Name>Тип</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Тип</Name>
+				<ShortName>Tip</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Тип</Name>
+					<ShortName>Tip</ShortName>
+					<Description></Description>
+					<Value>Теплая, влажная погода</Value>
+					<DataType>1</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+	</Conditions>
+		<Condition>
+			<Name>Значение</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Значение</Name>
+				<ShortName>Znachenie</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Значение</Name>
+					<ShortName>Znachenie</ShortName>
+					<Description></Description>
+					<Value>Не часто</Value>
+					<DataType>1</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+	</Conditions>
+	<Actions>
+		<Action>
+			<Name>Значение</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Значение</Name>
+				<ShortName>Znachenie</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Значение</Name>
+					<ShortName>Znachenie</ShortName>
+					<Description></Description>
+					<Value>Не часто</Value>
+					<DataType>1</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+	</Actions>
+</Rule>
+<Rule>
+	<ID>R006</ID>
+	<Name>Погодные условия+Частота полива>Состояние почвы_3</Name>
+	<ShortName>Pogodnye-usloviya+Chastota-poliva>Sostoyanie-pochvy-3</ShortName>
+	<Description>Описание правила: Погодные условия+Частота полива>Состояние почвы_3</Description>
+	<Salience>0</Salience>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<Conditions>
+		<Condition>
+			<Name>Тип</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Тип</Name>
+				<ShortName>Tip</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Тип</Name>
+					<ShortName>Tip</ShortName>
+					<Description></Description>
+					<Value>Холодная, сухая погода</Value>
+					<DataType>1</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+	</Conditions>
+		<Condition>
+			<Name>Значение</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Значение</Name>
+				<ShortName>Znachenie</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Значение</Name>
+					<ShortName>Znachenie</ShortName>
+					<Description></Description>
+					<Value>Не часто</Value>
+					<DataType>1</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+	</Conditions>
+	<Actions>
+		<Action>
+			<Name>Значение</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Значение</Name>
+				<ShortName>Znachenie</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Значение</Name>
+					<ShortName>Znachenie</ShortName>
+					<Description></Description>
+					<Value>Не часто</Value>
+					<DataType>1</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+	</Actions>
+</Rule>
+<Rule>
+	<ID>R007</ID>
+	<Name>Погодные условия+Частота полива>Состояние почвы_4</Name>
+	<ShortName>Pogodnye-usloviya+Chastota-poliva>Sostoyanie-pochvy-4</ShortName>
+	<Description>Описание правила: Погодные условия+Частота полива>Состояние почвы_4</Description>
+	<Salience>0</Salience>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<Conditions>
+		<Condition>
+			<Name>Тип</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Тип</Name>
+				<ShortName>Tip</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Тип</Name>
+					<ShortName>Tip</ShortName>
+					<Description></Description>
+					<Value>Холодная, сухая погода</Value>
+					<DataType>1</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+	</Conditions>
+		<Condition>
+			<Name>Значение</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Значение</Name>
+				<ShortName>Znachenie</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Значение</Name>
+					<ShortName>Znachenie</ShortName>
+					<Description></Description>
+					<Value>Часто</Value>
+					<DataType>1</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+	</Conditions>
+	<Actions>
+		<Action>
+			<Name>Значение</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Значение</Name>
+				<ShortName>Znachenie</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Значение</Name>
+					<ShortName>Znachenie</ShortName>
+					<Description></Description>
+					<Value>Часто</Value>
+					<DataType>1</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+	</Actions>
+</Rule>
+<Rule>
+	<ID>R008</ID>
+	<Name>Состояние почвы>Урожай_1</Name>
+	<ShortName>Sostoyanie-pochvy>Urozhay-1</ShortName>
+	<Description>Описание правила: Состояние почвы>Урожай_1</Description>
+	<Salience>0</Salience>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<Conditions>
+		<Condition>
+			<Name>Состояние</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Состояние</Name>
+				<ShortName>Sostoyanie</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Состояние</Name>
+					<ShortName>Sostoyanie</ShortName>
+					<Description></Description>
+					<Value>Отличное</Value>
+					<DataType>1</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+	</Conditions>
+	<Actions>
+		<Action>
+			<Name>Состояние</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Состояние</Name>
+				<ShortName>Sostoyanie</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Состояние</Name>
+					<ShortName>Sostoyanie</ShortName>
+					<Description></Description>
+					<Value>Отличное</Value>
+					<DataType>1</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+	</Actions>
+</Rule>
+<Rule>
+	<ID>R009</ID>
+	<Name>Состояние почвы>Урожай_2</Name>
+	<ShortName>Sostoyanie-pochvy>Urozhay-2</ShortName>
+	<Description>Описание правила: Состояние почвы>Урожай_2</Description>
+	<Salience>0</Salience>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<Conditions>
+		<Condition>
+			<Name>Состояние</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Состояние</Name>
+				<ShortName>Sostoyanie</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Состояние</Name>
+					<ShortName>Sostoyanie</ShortName>
+					<Description></Description>
+					<Value>Удовлетворительное</Value>
+					<DataType>1</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+	</Conditions>
+	<Actions>
+		<Action>
+			<Name>Состояние</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Состояние</Name>
+				<ShortName>Sostoyanie</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Состояние</Name>
+					<ShortName>Sostoyanie</ShortName>
+					<Description></Description>
+					<Value>Удовлетворительное</Value>
+					<DataType>1</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+	</Actions>
+</Rule>
+<Rule>
+	<ID>R0010</ID>
+	<Name>Состояние почвы>Урожай_3</Name>
+	<ShortName>Sostoyanie-pochvy>Urozhay-3</ShortName>
+	<Description>Описание правила: Состояние почвы>Урожай_3</Description>
+	<Salience>0</Salience>
+	<PackageName></PackageName>
+	<RootPackageName></RootPackageName>
+	<Conditions>
+		<Condition>
+			<Name>Состояние</Name>
+			<Operator>and</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Состояние</Name>
+				<ShortName>Sostoyanie</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Состояние</Name>
+					<ShortName>Sostoyanie</ShortName>
+					<Description></Description>
+					<Value>Неудовлетворительное</Value>
+					<DataType>1</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Condition>
+	</Conditions>
+	<Actions>
+		<Action>
+			<Name>Состояние</Name>
+			<Operator>add</Operator>
+			<Fact>
+				<ID></ID>
+				<Name>Состояние</Name>
+				<ShortName>Sostoyanie</ShortName>
+				<Mode>1</Mode>
+				<PackageName></PackageName>
+				<DrawParams></DrawParams>
+				<Slots>
+					<Slot>
+					<Name>Состояние</Name>
+					<ShortName>Sostoyanie</ShortName>
+					<Description></Description>
+					<Value>Неудовлетворительное</Value>
+					<DataType>1</DataType>
+					<Constraint></Constraint>
+					</Slot>
+				</Slots>
+			</Fact>
+		</Action>
+	</Actions>
+</Rule>
+</Rules>
+<Functions/>
+<Tasks/>
+<TempPackageList/>
+<FactPackageList/>
+<RulePackageList/>
+<GRulePackageList/>
+</KnowledgeBase>
+</Structure>

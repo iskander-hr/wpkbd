@@ -1,0 +1,19 @@
+<?php
+
+/* @var $this yii\web\View */
+
+use yii\helpers\Html;
+
+$this->title = 'О проекте';
+$this->params['breadcrumbs'][] = $this->title;
+?>
+<div class="site-about">
+   <h1><?= Html::encode($this->title) ?></h1>
+   <ul>
+   <p class="lead">Данный проект представляет собой...</p>
+   <li>Разработчик: <strong>Сопп Дмитрий</strong></li>
+   <li>Руководитьель проекта: <strong>Юрин Александр</strong></li>
+   </ul>
+
+
+</div>
