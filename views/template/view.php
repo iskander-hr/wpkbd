@@ -9,7 +9,7 @@ use yii\grid\GridView;
 /* @var $model app\models\Template */
 
 $this->title = '[' . $model->uin . '] - '. $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Шаблоны', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Шаблоны для фактов', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
@@ -45,7 +45,7 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]) ?>
 
-<h2>Слоты для шаблона: <?= $this->title ?> <?= Html::a('Добавить', ['/template-slot/create', 'id' => $model->id], ['class' => 'btn btn-primary']) ?> </h2>
+<h2>Слоты шаблона: <?= $this->title ?> <?= Html::a('Добавить', ['/template-slot/create', 'id' => $model->id], ['class' => 'btn btn-primary']) ?> </h2>
 <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'layout'=>"{items}",

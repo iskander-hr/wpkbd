@@ -43,11 +43,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 'format' => ['date', 'php:d.m.Y']
             ],
             [
-                'label' => 'Количество шаблонов',
+                'label' => 'Количество шаблонов для фактов',
                 'value' =>  Template::getCount(),
             ],
             [
-                'label' => 'Количество шаблонов правил',
+                'label' => 'Количество шаблонов для правил',
                 'value' => Grule::getCount(),
             ],
             [

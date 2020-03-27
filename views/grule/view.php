@@ -8,7 +8,7 @@ use yii\grid\GridView;
 /* @var $model app\models\Grule */
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Шаблоны правил', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Шаблоны для правил', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>

@@ -71,8 +71,8 @@ AppAsset::register($this);
         ['label' => 'Базы знаний','url' => ['/knowlegebase']], 
         ['label' => 'Шаблоны',
             'items' => [
-                ['label' => 'Шаблоны','url' => ['/template']],
-                ['label' => 'Шаблоны правил' , 'url' => ['/grule']],
+                ['label' => 'Шаблоны для фактов','url' => ['/template']],
+                ['label' => 'Шаблоны для правил' , 'url' => ['/grule']],
             ],
         ],
         

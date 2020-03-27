@@ -6,7 +6,7 @@ use yii\grid\GridView;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Шаблоны правил';
+$this->title = 'Шаблоны для правил';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="grule-index">

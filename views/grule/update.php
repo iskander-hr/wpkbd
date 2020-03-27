@@ -5,8 +5,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Grule */
 
-$this->title = 'Редактирование шаблона правил: ' . $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Шаблоны правил', 'url' => ['index']];
+$this->title = 'Редактирование шаблона для правил: ' . $model->name;
+$this->params['breadcrumbs'][] = ['label' => 'Шаблоны для правил', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Редактирование';
 ?>

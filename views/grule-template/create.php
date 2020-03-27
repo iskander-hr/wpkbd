@@ -8,7 +8,7 @@ use app\models\GruleTemplate;
 /* @var $model app\models\GruleTemplate */
 
 $this->title = 'Новое условие ' . GruleTemplate::getTypeName($model->type);
-$this->params['breadcrumbs'][] = ['label' => 'Шаблоны правил', 'url' => ['/grule']];
+$this->params['breadcrumbs'][] = ['label' => 'Шаблоны для правил', 'url' => ['/grule']];
 $this->params['breadcrumbs'][] = ['label' => Grule::getGruleName($model->grule_id), 'url' => ['/grule/view', 'id' => $model->grule_id]];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

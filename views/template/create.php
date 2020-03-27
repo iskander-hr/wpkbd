@@ -5,9 +5,9 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Template */
 
-$this->title = 'Новый шаблон';
-$this->params['breadcrumbs'][] = ['label' => 'Шаблоны', 'url' => ['index']];
-$this->params['breadcrumbs'][] = 'Добавление шаблона';
+$this->title = 'Новый шаблон для фактов';
+$this->params['breadcrumbs'][] = ['label' => 'Шаблоны для фактов', 'url' => ['index']];
+$this->params['breadcrumbs'][] = 'Добавление шаблона для факта';
 ?>
 <div class="template-create">
 

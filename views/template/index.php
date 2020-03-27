@@ -7,7 +7,7 @@ use app\models\Template;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Шаблоны';
+$this->title = 'Шаблоны для фактов';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="template-index">
